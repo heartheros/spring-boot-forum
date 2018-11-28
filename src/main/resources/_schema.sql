@@ -89,9 +89,13 @@ nickname	           varchar(30) not null comment '公司昵称',
 name	               varchar(80) comment '公司名',
 crdt_code	           varchar(30)  comment '单位信用代码',
 legal_name	           varchar(30)  comment '法人',
+mobile	           varchar(50)  comment '电话',
 phone_num	           varchar(50)  comment '电话',
 address	             varchar(255) comment '住址',
 email	               varchar(80) comment '邮箱地址',
+field               char(2) comment '公司行业性质',
+size                char(2) comment '公司规模人数',
+regicapital        int comment '注册资金万元',
 type                 char(4) not null default '0006' comment '单位类型',
 busi_type_comp	     char(2)  not null default '00' comment '网站归类 '
 );
@@ -106,6 +110,7 @@ comp	           varchar(30) not null comment '发布公司id',
 post_date	               date comment '发布日期',
 expiry_date	           date  comment '到期日期',
 title	           varchar(60)  comment '职位名称',
+location        varchar(100) comment '职位所属地点',
 abstract	           varchar(200)  comment '职位摘要',
 content	             varchar(4096) comment '职位描述',
 phone_num	               varchar(50) comment '电话',
@@ -171,5 +176,12 @@ userid varchar(30) not null comment '用户id',
 expirydate date default '2099-12-30' comment '令牌到期日',
 PRIMARY KEY (`id`)
 );
+
+drop table r_param if exists;
+create table r_param(
+id int not null auto_increment comment '参数id',
+param_name varchar(30) comment '参数名称',
+param_value varchar(80) comment '参数值'
+)
 
 
