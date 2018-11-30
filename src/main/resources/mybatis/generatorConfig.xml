@@ -53,5 +53,11 @@
                enableUpdateByExample="false"/>
         <table tableName="r_apply" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="true"
         enableUpdateByExample="false"/>
+        <table tableName="r_param" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="true"
+               enableUpdateByExample="false"/>
+        <table tableName="r_usercharge" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="true"
+               enableUpdateByExample="false"/>
+        <table tableName="r_companycharge" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="true"
+               enableUpdateByExample="false"/>
     </context>
 </generatorConfiguration>

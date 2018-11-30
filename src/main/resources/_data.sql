@@ -608,3 +608,8 @@ INSERT INTO `T_COMMENT` (post_id, user_id, body, date_created) VALUES (
 51, 1, "回复内容51-2", '2017-11-27 23:23:23');
 
 
+#use for new web
+INSERT INTO r_param(param_name,param_value) VALUES (
+"OWNERNAME","WEB设计公司"
+);
+

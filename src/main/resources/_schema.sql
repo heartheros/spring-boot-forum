@@ -62,7 +62,7 @@ CREATE TABLE `T_VERIFICATION_TOKEN` (
 );
 
 #add for recuritment test project
-use db_springboot_forum
+use db_springboot_forum;
 
 drop table IF EXISTS r_user;
 create table r_user(
@@ -75,6 +75,7 @@ phone_num	           varchar(50) comment '电话',
 address	             varchar(255) comment '住址',
 email	               varchar(80) comment '邮箱地址',
 busi_type_user	     char(2)  not null default '00' comment '网站归类 ',
+rmt_amt              decimal(19,2) comment '个人余额',
 remark1	             varchar(80) comment '个人标签1',
 remark2	             varchar(80) comment '个人标签2',
 remark3	             varchar(80) comment '个人标签3',
@@ -97,6 +98,7 @@ email	               varchar(80) comment '邮箱地址',
 field               char(2) comment '公司行业性质',
 size                char(2) comment '公司规模人数',
 regicapital        int comment '注册资金万元',
+rmt_amt              decimal(19,2) comment '公司余额',
 type                 char(4) not null default '0006' comment '单位类型',
 busi_type_comp	     char(2)  not null default '00' comment '网站归类 ',
 primary key(id)
@@ -112,6 +114,7 @@ post_date	               date comment '发布日期',
 expiry_date	           date  comment '到期日期',
 title	           varchar(60)  comment '职位名称',
 location        varchar(100) comment '职位所属地点',
+jobtype          char(2) comment '职位类型大类',
 abstract	           varchar(200)  comment '职位摘要',
 content	             varchar(4096) comment '职位描述',
 phone_num	               varchar(50) comment '电话',
@@ -184,7 +187,28 @@ id int not null auto_increment comment '参数id',
 param_name varchar(30) comment '参数名称',
 param_value varchar(80) comment '参数值',
 PRIMARY KEY (`id`)
-)
+);
 alter table r_param add unique(param_name);
-commit;
 
+drop table if exists r_usercharge;
+create table r_usercharge(
+id int not null auto_increment comment '充值id',
+chargedate date not null comment '充值日期',
+chargeid int not null comment '用户id',
+chargetime timestamp(3) default current_timestamp(3) comment '充值时间',
+chargeamt  decimal(19,2) comment '充值金额',
+PRIMARY KEY (`id`)
+);
+alter table r_usercharge add index charge_userIndex(chargeid,chargedate);
+
+drop table if exists r_companycharge;
+create table r_companycharge(
+id int not null auto_increment comment '充值id',
+chargedate date not null comment '充值日期',
+chargeid int not null comment '公司id',
+chargetime timestamp(3) default current_timestamp(3) comment '充值时间',
+chargeamt  decimal(19,2) comment '充值金额',
+PRIMARY KEY (`id`)
+);
+alter table r_companycharge add index charge_companyIndex(chargeid,chargedate);
+commit;

@@ -1,5 +1,6 @@
 package com.qingwenwei.persistence.model;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -1011,6 +1012,66 @@ public class RCompanyExample {
 
         public Criteria andRegicapitalNotBetween(Integer value1, Integer value2) {
             addCriterion("regicapital not between", value1, value2, "regicapital");
+            return (Criteria) this;
+        }
+
+        public Criteria andRmtAmtIsNull() {
+            addCriterion("rmt_amt is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRmtAmtIsNotNull() {
+            addCriterion("rmt_amt is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRmtAmtEqualTo(BigDecimal value) {
+            addCriterion("rmt_amt =", value, "rmtAmt");
+            return (Criteria) this;
+        }
+
+        public Criteria andRmtAmtNotEqualTo(BigDecimal value) {
+            addCriterion("rmt_amt <>", value, "rmtAmt");
+            return (Criteria) this;
+        }
+
+        public Criteria andRmtAmtGreaterThan(BigDecimal value) {
+            addCriterion("rmt_amt >", value, "rmtAmt");
+            return (Criteria) this;
+        }
+
+        public Criteria andRmtAmtGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("rmt_amt >=", value, "rmtAmt");
+            return (Criteria) this;
+        }
+
+        public Criteria andRmtAmtLessThan(BigDecimal value) {
+            addCriterion("rmt_amt <", value, "rmtAmt");
+            return (Criteria) this;
+        }
+
+        public Criteria andRmtAmtLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("rmt_amt <=", value, "rmtAmt");
+            return (Criteria) this;
+        }
+
+        public Criteria andRmtAmtIn(List<BigDecimal> values) {
+            addCriterion("rmt_amt in", values, "rmtAmt");
+            return (Criteria) this;
+        }
+
+        public Criteria andRmtAmtNotIn(List<BigDecimal> values) {
+            addCriterion("rmt_amt not in", values, "rmtAmt");
+            return (Criteria) this;
+        }
+
+        public Criteria andRmtAmtBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("rmt_amt between", value1, value2, "rmtAmt");
+            return (Criteria) this;
+        }
+
+        public Criteria andRmtAmtNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("rmt_amt not between", value1, value2, "rmtAmt");
             return (Criteria) this;
         }
 

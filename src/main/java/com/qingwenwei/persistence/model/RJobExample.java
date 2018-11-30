@@ -602,6 +602,76 @@ public class RJobExample {
             return (Criteria) this;
         }
 
+        public Criteria andJobtypeIsNull() {
+            addCriterion("jobtype is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andJobtypeIsNotNull() {
+            addCriterion("jobtype is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andJobtypeEqualTo(String value) {
+            addCriterion("jobtype =", value, "jobtype");
+            return (Criteria) this;
+        }
+
+        public Criteria andJobtypeNotEqualTo(String value) {
+            addCriterion("jobtype <>", value, "jobtype");
+            return (Criteria) this;
+        }
+
+        public Criteria andJobtypeGreaterThan(String value) {
+            addCriterion("jobtype >", value, "jobtype");
+            return (Criteria) this;
+        }
+
+        public Criteria andJobtypeGreaterThanOrEqualTo(String value) {
+            addCriterion("jobtype >=", value, "jobtype");
+            return (Criteria) this;
+        }
+
+        public Criteria andJobtypeLessThan(String value) {
+            addCriterion("jobtype <", value, "jobtype");
+            return (Criteria) this;
+        }
+
+        public Criteria andJobtypeLessThanOrEqualTo(String value) {
+            addCriterion("jobtype <=", value, "jobtype");
+            return (Criteria) this;
+        }
+
+        public Criteria andJobtypeLike(String value) {
+            addCriterion("jobtype like", value, "jobtype");
+            return (Criteria) this;
+        }
+
+        public Criteria andJobtypeNotLike(String value) {
+            addCriterion("jobtype not like", value, "jobtype");
+            return (Criteria) this;
+        }
+
+        public Criteria andJobtypeIn(List<String> values) {
+            addCriterion("jobtype in", values, "jobtype");
+            return (Criteria) this;
+        }
+
+        public Criteria andJobtypeNotIn(List<String> values) {
+            addCriterion("jobtype not in", values, "jobtype");
+            return (Criteria) this;
+        }
+
+        public Criteria andJobtypeBetween(String value1, String value2) {
+            addCriterion("jobtype between", value1, value2, "jobtype");
+            return (Criteria) this;
+        }
+
+        public Criteria andJobtypeNotBetween(String value1, String value2) {
+            addCriterion("jobtype not between", value1, value2, "jobtype");
+            return (Criteria) this;
+        }
+
         public Criteria andAbstractIsNull() {
             addCriterion("abstract is null");
             return (Criteria) this;
