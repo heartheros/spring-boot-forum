@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head th:include="fragments/head :: head">
+</head>
+<body>
+<div class="panel panel-default panel-bg">
+    <div th:replace="fragments/header :: header"></div>
+    <div class="container">
+        <h1>hello Spring Boot!</h1>
+    </div>
+</div>
+<footer th:replace="fragments/footer :: footer"></footer>
+</body>
+</html>
